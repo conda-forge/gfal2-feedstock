@@ -8,8 +8,6 @@ package:
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
   sha256: 5adf2d310375115a952d1d3e09cae186bcf19ba90e0f7b8e8bab14183e6884ae
-  patches:
-    - 0001-Avoid-passing-null-format-to-vsnprintf.patch
 
 build:
   number: 0
