@@ -1,5 +1,5 @@
 {% set name = "gfal2" %}
-{% set version = "2.16.2" %}
+{% set version = "2.16.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 2572891eeabd36f499d03bab42bd1fc3dfe33c219290c5c238d54bc2349d2a65
-  patches:
-    - 0001-Avoid-passing-null-format-to-vsnprintf.patch
+  sha256: 5adf2d310375115a952d1d3e09cae186bcf19ba90e0f7b8e8bab14183e6884ae
 
 build:
   number: 0
