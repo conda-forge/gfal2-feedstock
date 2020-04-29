@@ -1,5 +1,5 @@
 {% set name = "gfal2" %}
-{% set version = "2.17.2" %}
+{% set version = "2.17.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 7d8b4654c58aa607e9d20642a29f9f0227a6cd151b795f4c9bda08d60243ef02
+  sha256: 92c463b8d4d60aeb47dcc775fd2a36fd318335105a471192a8ae76a1a3d46a0f
 
 build:
   number: 0
@@ -55,7 +55,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'GFAL (Grid File Access Library) is a C library providing an abstraction layer of the grid storage system complexity.'
+  summary: GFAL (Grid File Access Library) is a C library providing an abstraction layer of the grid storage system complexity.
   description: |
     GFAL (Grid File Access Library) is a C library providing an abstraction
     layer of the grid storage system complexity. The version 2 of GFAL tries to
