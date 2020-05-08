@@ -34,6 +34,6 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 xrootd:
-- 4.11.0
+- '4.12'
 zlib:
 - '1.2'
