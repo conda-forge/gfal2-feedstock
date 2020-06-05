@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 92c463b8d4d60aeb47dcc775fd2a36fd318335105a471192a8ae76a1a3d46a0f
+  sha256: bcc93f0935cc6a0be85311633547bdd1a7249eec0631eb421d4de443a5199eda
 
 build:
   number: 1
