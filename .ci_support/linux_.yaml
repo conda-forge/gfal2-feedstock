@@ -17,19 +17,17 @@ glib:
 json_c:
 - '0.13'
 libssh2:
-- '1.8'
+- '1'
 libuuid:
 - 2.32.1
 pin_run_as_build:
   json-c:
-    max_pin: x.x
-  libssh2:
     max_pin: x.x
   libuuid:
     max_pin: x
   zlib:
     max_pin: x.x
 xrootd:
-- 4.11.0
+- '4.12'
 zlib:
 - '1.2'
