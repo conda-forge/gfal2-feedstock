@@ -8,8 +8,6 @@ package:
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
   sha256: ffd56da046049ae56b457ee2a38c21460fdadf966a6e86d1e718a985d4cc6b7d
-  patches:
-    - Use-json-c-in-gfal_http_qos.patch
 
 build:
   number: 0
