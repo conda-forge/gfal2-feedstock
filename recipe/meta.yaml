@@ -1,5 +1,5 @@
 {% set name = "gfal2" %}
-{% set version = "2.18.0" %}
+{% set version = "2.18.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 3298f353ea46e7ec811ee9364273c868bbd0fde34b17cc33a0dbc4fd591fc585
-  patches:
-    - Use-json-c-in-gfal_http_qos.patch
+  sha256: ffd56da046049ae56b457ee2a38c21460fdadf966a6e86d1e718a985d4cc6b7d
 
 build:
   number: 0
