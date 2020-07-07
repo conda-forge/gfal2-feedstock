@@ -5,7 +5,7 @@ Home: http://dmc.web.cern.ch/projects/gfal-2/home
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: GFAL (Grid File Access Library) is a C library providing an abstraction layer of the grid storage system complexity.
 
