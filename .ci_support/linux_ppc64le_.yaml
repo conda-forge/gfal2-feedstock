@@ -1,17 +1,17 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 c_compiler:
-- clang
+- gcc
 c_compiler_version:
-- '10'
+- '8'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- clangxx
+- gxx
 cxx_compiler_version:
-- '10'
+- '8'
+docker_image:
+- condaforge/linux-anvil-ppc64le
 glib:
 - '2.58'
 json_c:
@@ -20,8 +20,6 @@ libssh2:
 - '1'
 libuuid:
 - 2.32.1
-macos_machine:
-- x86_64-apple-darwin13.4.0
 pin_run_as_build:
   json-c:
     max_pin: x.x
@@ -30,7 +28,7 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 target_platform:
-- osx-64
+- linux-ppc64le
 xrootd:
 - '5'
 zlib:
