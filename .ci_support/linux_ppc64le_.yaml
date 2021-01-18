@@ -15,7 +15,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-ppc64le
 glib:
-- '2.58'
+- '2.66'
 json_c:
 - '0.13'
 libssh2:
