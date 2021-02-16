@@ -13,9 +13,9 @@ cxx_compiler:
 cxx_compiler_version:
 - '11'
 glib:
-- '2.66'
+- '2'
 json_c:
-- '0.13'
+- '0.15'
 libssh2:
 - '1'
 libuuid:
