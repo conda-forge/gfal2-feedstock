@@ -12,6 +12,8 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '11'
+davix:
+- '0.8'
 glib:
 - '2'
 json_c:
