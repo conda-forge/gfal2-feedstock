@@ -8,6 +8,8 @@ package:
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
   sha256: aa96a1e89c9190e78f44459e26e7bd3401587d44f86176726b960a5d47e17c7a
+  patches:
+    - 0001-Define-ECOMM-and-ECHRNG-if-required-e.g.-macOS.patch
 
 build:
   number: 0
