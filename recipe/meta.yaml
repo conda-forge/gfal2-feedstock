@@ -1,5 +1,5 @@
 {% set name = "gfal2" %}
-{% set version = "2.19.2" %}
+{% set version = "2.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,9 @@ package:
 
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: de1dcc1cd5cd0d296edc632a405443096f78e3e532cc2387461059ec756c0eda
+  sha256: aa96a1e89c9190e78f44459e26e7bd3401587d44f86176726b960a5d47e17c7a
+  patches:
+    - 0001-Define-ECOMM-and-ECHRNG-if-required-e.g.-macOS.patch
 
 build:
   number: 0

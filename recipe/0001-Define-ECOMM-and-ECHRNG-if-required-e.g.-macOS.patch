@@ -1,0 +1,38 @@
+From 7bf0efee94b4c94d6dac16bc247e20a8fed90aa1 Mon Sep 17 00:00:00 2001
+From: Chris Burr <christopher.burr@cern.ch>
+Date: Thu, 30 Sep 2021 07:51:27 +0200
+Subject: [PATCH] Define ECOMM and ECHRNG if required (e.g. macOS)
+
+---
+ src/plugins/xrootd/gfal_xrootd_plugin_utils.cpp | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/src/plugins/xrootd/gfal_xrootd_plugin_utils.cpp b/src/plugins/xrootd/gfal_xrootd_plugin_utils.cpp
+index 68063c63..3eca4ec7 100644
+--- a/src/plugins/xrootd/gfal_xrootd_plugin_utils.cpp
++++ b/src/plugins/xrootd/gfal_xrootd_plugin_utils.cpp
+@@ -261,6 +261,10 @@ void collapse_slashes(std::string& path)
+ 
+ 
+ // Mask network error codes as ECOMM
++#ifndef ECOMM
++#define ECOMM 70
++#endif
++
+ static int mask_network_errno(int errc)
+ {
+     switch (errc) {
+@@ -280,6 +284,10 @@ static int mask_network_errno(int errc)
+ 
+ 
+ // Copied from xrootd/src/XrdPosix/XrdPosixMap.cc
++#ifndef ECHRNG
++#define ECHRNG 44
++#endif
++
+ static int map_status_code_to_errno(int code)
+ {
+     switch (code) {
+-- 
+2.33.0
+
