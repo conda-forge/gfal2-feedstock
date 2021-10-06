@@ -27,7 +27,7 @@ json_c:
 libssh2:
 - '1'
 libuuid:
-- 2.32.1
+- '2'
 pin_run_as_build:
   json-c:
     max_pin: x.x
