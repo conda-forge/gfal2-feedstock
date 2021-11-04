@@ -1,9 +1,3 @@
-#!/usr/bin/env bash
-set -euo pipefail
-IFS=$'\n\t'
-
-set -x
-
 find . -name '*.h' -exec sed -i 's@#include <attr/xattr.h>@#include <sys/xattr.h>@g' {} \;
 find . -name '*.c' -exec sed -i 's@#include <attr/xattr.h>@#include <sys/xattr.h>@g' {} \;
 
