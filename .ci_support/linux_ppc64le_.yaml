@@ -16,6 +16,8 @@ davix:
 - '0.8'
 docker_image:
 - quay.io/condaforge/linux-anvil-ppc64le
+gct:
+- 6.2.1550507116
 glib:
 - '2'
 json_c:
