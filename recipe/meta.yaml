@@ -8,6 +8,9 @@ package:
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
   sha256: b3c46421ea9da8b2d094bb19ee76ecf28a41833a247121f48f37640298faedbc
+  patches:
+    - 0001-Check-_DARWIN_FEATURE_ONLY_64_BIT_INODE-to-avoid-err.patch
+    - 0002-Recent-versions-of-openldap-have-merged-libldap_r-in.patch
 
 build:
   number: 1

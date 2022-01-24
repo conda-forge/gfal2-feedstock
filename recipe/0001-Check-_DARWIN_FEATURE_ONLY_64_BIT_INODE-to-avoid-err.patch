@@ -1,0 +1,46 @@
+From db5768c69fdec5dadc12c46e612a764e1b55b5ba Mon Sep 17 00:00:00 2001
+From: Chris Burr <christopher.burr@cern.ch>
+Date: Mon, 24 Jan 2022 15:28:20 +0100
+Subject: [PATCH 1/2] Check _DARWIN_FEATURE_ONLY_64_BIT_INODE to avoid errors
+ from stat64 being undefined
+
+---
+ src/plugins/srm/gfal_srm_internal_ls.c | 7 +++++--
+ src/plugins/srm/gfal_srm_readdir.c     | 3 +++
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/src/plugins/srm/gfal_srm_internal_ls.c b/src/plugins/srm/gfal_srm_internal_ls.c
+index 71b4a08..2b55887 100644
+--- a/src/plugins/srm/gfal_srm_internal_ls.c
++++ b/src/plugins/srm/gfal_srm_internal_ls.c
+@@ -86,8 +86,11 @@ int gfal_statG_srmv2__generic_internal(srm_context_t context, struct stat *buf,
+     const char *surl, GError **err)
+ {
+     g_return_val_err_if_fail(context && surl
+-                             && buf && (sizeof(struct stat) == sizeof(struct stat64)),
+-        -1, err, "[gfal_statG_srmv2_generic_internal] Invalid args handle/endpoint or invalid stat struct size");
++                             && buf
++#if !defined(_DARWIN_FEATURE_ONLY_64_BIT_INODE)
++                             && (sizeof(struct stat) == sizeof(struct stat64))
++#endif
++        , -1, err, "[gfal_statG_srmv2_generic_internal] Invalid args handle/endpoint or invalid stat struct size");
+     GError *tmp_err = NULL;
+     struct srm_ls_input input;
+     struct srm_ls_output output;
+diff --git a/src/plugins/srm/gfal_srm_readdir.c b/src/plugins/srm/gfal_srm_readdir.c
+index b62e722..0b663b2 100644
+--- a/src/plugins/srm/gfal_srm_readdir.c
++++ b/src/plugins/srm/gfal_srm_readdir.c
+@@ -29,6 +29,9 @@
+ #include "gfal_srm_internal_layer.h"
+ #include "gfal_srm_internal_ls.h"
+ 
++#if defined(_DARWIN_FEATURE_ONLY_64_BIT_INODE)
++#    define stat64 stat
++#endif
+ 
+ /**
+  * Casts a 64 bits stat into whatever stat type we are using in this compilation unit.
+-- 
+2.29.2
+
