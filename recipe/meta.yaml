@@ -1,5 +1,5 @@
 {% set name = "gfal2" %}
-{% set version = "2.20.4" %}
+{% set version = "2.20.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,7 @@ package:
 
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 530afe293b42a0646c477c2480e0d4c2417ae65d51e44f9c335038839d2b7d5d
-  patches:
-    - 0001-Check-_DARWIN_FEATURE_ONLY_64_BIT_INODE-to-avoid-err.patch
-    - 0002-Recent-versions-of-openldap-have-merged-libldap_r-in.patch
+  sha256: 1b8afb8fd088192487f968b1a83d9ee891f73a09ff830df07c63ad5579d98499
 
 build:
   number: 0
