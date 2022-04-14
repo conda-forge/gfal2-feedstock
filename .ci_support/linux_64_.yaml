@@ -21,7 +21,7 @@ gct:
 glib:
 - '2'
 json_c:
-- '0.15'
+- '0.16'
 libssh2:
 - '1'
 libuuid:
