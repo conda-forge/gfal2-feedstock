@@ -1,5 +1,5 @@
 {% set name = "gfal2" %}
-{% set version = "2.21.0" %}
+{% set version = "2.21.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 195d38dd512fade7ff68f4a1200c3cd2490a0545e5c09cbf5f3ae1c0c790f3cd
+  sha256: 28e530a4ea0732c0daf55a61eb9c0fa771b7d29416ad41655424225c02eca32f
 
 build:
   number: 0
