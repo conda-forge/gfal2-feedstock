@@ -30,13 +30,6 @@ libssh2:
 - '1'
 libuuid:
 - '2'
-pin_run_as_build:
-  json-c:
-    max_pin: x.x
-  libuuid:
-    max_pin: x
-  zlib:
-    max_pin: x.x
 target_platform:
 - linux-aarch64
 xrootd:
