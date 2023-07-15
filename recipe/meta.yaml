@@ -38,6 +38,7 @@ requirements:
     - srm-ifce
     - gct
     - gtest
+    - cryptopp
   run:
     - {{ pin_compatible('json-c', max_pin='x.x') }}
 

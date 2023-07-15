@@ -5,6 +5,8 @@ mkdir build
 cd build
 
 cmake ${CMAKE_ARGS} \
+    -DCRYPTOPP_LIBRARIES="${PREFIX}/lib/libcryptopp${SHLIB_EXT}" \
+    -DCRYPTOPP_INCLUDE_DIRS="${PREFIX}/include/cryptopp" \
     -DXROOTD_LOCATION="${PREFIX}" \
     -DPLUGIN_LFC=OFF \
     -DPLUGIN_RFIO=OFF \
