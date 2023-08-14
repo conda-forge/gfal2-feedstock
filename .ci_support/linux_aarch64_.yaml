@@ -3,7 +3,7 @@ BUILD:
 c_compiler:
 - gcc
 c_compiler_version:
-- '11'
+- '12'
 cdt_arch:
 - aarch64
 cdt_name:
@@ -15,7 +15,7 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '11'
+- '12'
 davix:
 - '0.8'
 dcap:
@@ -27,7 +27,7 @@ gct:
 glib:
 - '2'
 json_c:
-- '0.16'
+- '0.17'
 libssh2:
 - '1'
 libuuid:
