@@ -37,7 +37,7 @@ requirements:
     - dcap
     - srm-ifce
     - gct
-    - gtest
+    - gtest <1.14.0  # Due to https://github.com/google/googletest/commit/038e392ebd8081c756e180475cc361f711fb438d requiring C++14
   run:
     - {{ pin_compatible('json-c', max_pin='x.x') }}
 
