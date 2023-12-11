@@ -1,11 +1,11 @@
-About gfal2
-===========
+About gfal2-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gfal2-feedstock/blob/main/LICENSE.txt)
 
 Home: http://dmc.web.cern.ch/projects/gfal-2/home
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gfal2-feedstock/blob/main/LICENSE.txt)
 
 Summary: GFAL (Grid File Access Library) is a C library providing an abstraction layer of the grid storage system complexity.
 
@@ -154,7 +154,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
