@@ -29,7 +29,7 @@ libuuid:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pugixml:
-- '1.13'
+- '1.14'
 srm_ifce:
 - 1.24.6
 target_platform:
