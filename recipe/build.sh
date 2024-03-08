@@ -11,6 +11,7 @@ cmake ${CMAKE_ARGS} \
     -DGTEST_LOCATION="${PREFIX}" \
     -DLIB_SUFFIX="" \
     -DCRYPTOPP_LOCATION="${PREFIX}" \
+    -DCMAKE_CXX_STANDARD=14 \
     ..
 
 make -j${CPU_COUNT}
