@@ -10,6 +10,7 @@ cmake ${CMAKE_ARGS} \
     -DPLUGIN_RFIO=OFF \
     -DGTEST_LOCATION="${PREFIX}" \
     -DLIB_SUFFIX="" \
+    -DCRYPTOPP_LOCATION="${PREFIX}" \
     ..
 
 make -j${CPU_COUNT}
