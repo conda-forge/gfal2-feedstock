@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '14'
+- '16'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '14'
+- '16'
 davix:
 - '0.8'
 dcap:
@@ -21,13 +21,15 @@ gct:
 glib:
 - '2'
 json_c:
-- '0.16'
+- '0.17'
 libssh2:
 - '1'
 libuuid:
 - '2'
 macos_machine:
 - arm64-apple-darwin20.0.0
+pugixml:
+- '1.14'
 srm_ifce:
 - 1.24.6
 target_platform:

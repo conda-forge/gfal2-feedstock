@@ -1,0 +1,27 @@
+From 4d3a87530b270504546b06e5c8ec89788e6dac34 Mon Sep 17 00:00:00 2001
+From: Chris Burr <christopher.burr@cern.ch>
+Date: Fri, 8 Mar 2024 14:09:24 +0100
+Subject: [PATCH] Drop CMakeCXX11Support
+
+---
+ CMakeLists.txt | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index d686b0a2..49cacd59 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -28,10 +28,6 @@ include(MacroCopyFile REQUIRED)
+ include(ReleaseDebugAutoFlags REQUIRED)
+ include(CMakeGeneratePkgConfig REQUIRED)
+ include(MacroAddDoxygen REQUIRED)
+-include(CMakeCXX11Support REQUIRED)
+-
+-# Enable C++11 support
+-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CXX11_FLAG_ENABLE}")
+ 
+ # enable testing
+ include (CTest)
+-- 
+2.39.3 (Apple Git-145)
+
