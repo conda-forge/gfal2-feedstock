@@ -1,0 +1,22 @@
+diff --git a/cmake/modules/FindCryptopp.cmake b/cmake/modules/FindCryptopp.cmake
+index 550d7386..a60ddb4a 100644
+--- a/cmake/modules/FindCryptopp.cmake
++++ b/cmake/modules/FindCryptopp.cmake
+@@ -25,7 +25,7 @@
+ # -----------------------------------------------------
+ find_library(CRYPTOPP_LIBRARIES
+     NAMES cryptopp
+-    HINTS ${CRYPTOPP_LOCATION}
++    HINTS ${CRYPTOPP_LOCATION}/lib
+           /lib /lib64 /usr/lib /usr/lib64
+     DOC "The cryptopp library"
+ )
+@@ -35,7 +35,7 @@ find_library(CRYPTOPP_LIBRARIES
+ # -----------------------------------------------------
+ find_path(CRYPTOPP_INCLUDE_DIRS
+     NAMES base64.h                # header for base64 encoding, not processor architecture
+-    HINTS ${CRYPTOPP_LOCATION}
++    HINTS ${CRYPTOPP_LOCATION}/include/cryptopp
+           /usr/include/cryptopp
+     DOC "The cryptopp headers"
+ )
