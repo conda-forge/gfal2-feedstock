@@ -1,5 +1,5 @@
 {% set name = "gfal2" %}
-{% set version = "2.22.2" %}
+{% set version = "2.23.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: cabd0d353d801dd98df563e28b004984ae398ba77795c79f66ac90c287fcbd86
+  sha256: 7ff9c3a022ff69dd7aa1664077194cc4028045c3209b1b732238175f5ef67fec
   patches:
     - 0001-Drop-CMakeCXX11Support.patch
     - 003-cryptopp.patch
@@ -22,6 +22,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - make
