@@ -3,7 +3,7 @@ BUILD:
 c_compiler:
 - gcc
 c_compiler_version:
-- '12'
+- '13'
 c_stdlib:
 - sysroot
 c_stdlib_version:
@@ -19,7 +19,7 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '12'
+- '13'
 davix:
 - '0.8'
 dcap:
@@ -31,7 +31,7 @@ gct:
 glib:
 - '2'
 json_c:
-- '0.17'
+- '0.18'
 libssh2:
 - '1'
 libuuid:

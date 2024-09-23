@@ -5,7 +5,7 @@ MACOSX_SDK_VERSION:
 c_compiler:
 - clang
 c_compiler_version:
-- '16'
+- '17'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -17,7 +17,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '16'
+- '17'
 davix:
 - '0.8'
 dcap:
@@ -27,7 +27,7 @@ gct:
 glib:
 - '2'
 json_c:
-- '0.17'
+- '0.18'
 libssh2:
 - '1'
 libuuid:
