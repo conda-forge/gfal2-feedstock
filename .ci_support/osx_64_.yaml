@@ -29,7 +29,7 @@ gfal2:
 glib:
 - '2'
 json_c:
-- '0.17'
+- '0.18'
 libssh2:
 - '1'
 libuuid:
