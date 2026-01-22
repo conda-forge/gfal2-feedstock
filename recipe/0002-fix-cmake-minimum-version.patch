@@ -1,0 +1,202 @@
+From 511ea4ed06a62282b2a139450a56024ea11bf555 Mon Sep 17 00:00:00 2001
+From: Chris Burr <christopher.burr@cern.ch>
+Date: Thu, 22 Jan 2026 08:56:38 +0100
+Subject: [PATCH] fix: Update cmake_minimum_required to VERSION 3.5
+
+CMake has removed compatibility with versions < 3.5. Also moved
+cmake_minimum_required before project() as per CMake best practices.
+---
+ CMakeLists.txt                     | 2 +-
+ src/CMakeLists.txt                 | 2 +-
+ src/core/CMakeLists.txt            | 2 +-
+ src/core/transfer/CMakeLists.txt   | 2 +-
+ src/plugins/CMakeLists.txt         | 2 +-
+ src/plugins/dcap/CMakeLists.txt    | 2 +-
+ src/plugins/file/CMakeLists.txt    | 2 +-
+ src/plugins/gridftp/CMakeLists.txt | 2 +-
+ src/plugins/http/CMakeLists.txt    | 2 +-
+ src/plugins/lfc/CMakeLists.txt     | 2 +-
+ src/plugins/mock/CMakeLists.txt    | 2 +-
+ src/plugins/rfio/CMakeLists.txt    | 2 +-
+ src/plugins/sftp/CMakeLists.txt    | 2 +-
+ src/plugins/srm/CMakeLists.txt     | 2 +-
+ src/plugins/xrootd/CMakeLists.txt  | 2 +-
+ src/utils/CMakeLists.txt           | 2 +-
+ src/version/CMakeLists.txt         | 2 +-
+ 17 files changed, 17 insertions(+), 17 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index a1b2f919..4929ad88 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,6 +1,6 @@
+ ## cmake build script for srm-ifce
++cmake_minimum_required (VERSION 3.5)
+ project (gfal2)
+-cmake_minimum_required (VERSION 2.6)
+ message ("cmake source dir : ${CMAKE_SOURCE_DIR}")
+ 
+ # default set of options
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index eee721a5..829037f1 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ # Shared utilities can be compiled as static, and then
+ # included at linking time
+diff --git a/src/core/CMakeLists.txt b/src/core/CMakeLists.txt
+index 0a5208be..df86010a 100644
+--- a/src/core/CMakeLists.txt
++++ b/src/core/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ # Sources needed for the core library
+ file (GLOB src_cancel     "cancel/*.c*")
+diff --git a/src/core/transfer/CMakeLists.txt b/src/core/transfer/CMakeLists.txt
+index 223e86b0..a288db1f 100644
+--- a/src/core/transfer/CMakeLists.txt
++++ b/src/core/transfer/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ if (MAIN_TRANSFER)
+         file (GLOB src_trans "*.c")
+diff --git a/src/plugins/CMakeLists.txt b/src/plugins/CMakeLists.txt
+index 29cd9a6c..9cac9ff2 100644
+--- a/src/plugins/CMakeLists.txt
++++ b/src/plugins/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ link_directories(${CMAKE_CURRENT_BINARY_DIR}/../core)
+ 
+diff --git a/src/plugins/dcap/CMakeLists.txt b/src/plugins/dcap/CMakeLists.txt
+index 10172818..22929f60 100644
+--- a/src/plugins/dcap/CMakeLists.txt
++++ b/src/plugins/dcap/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ 
+ if (PLUGIN_DCAP)
+diff --git a/src/plugins/file/CMakeLists.txt b/src/plugins/file/CMakeLists.txt
+index 400aee8f..14cc30e2 100644
+--- a/src/plugins/file/CMakeLists.txt
++++ b/src/plugins/file/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ 
+ if (PLUGIN_FILE)
+diff --git a/src/plugins/gridftp/CMakeLists.txt b/src/plugins/gridftp/CMakeLists.txt
+index 45b7a8b7..3cd90214 100644
+--- a/src/plugins/gridftp/CMakeLists.txt
++++ b/src/plugins/gridftp/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ if (PLUGIN_GRIDFTP)
+     file (GLOB_RECURSE src_gridftp "*.c*")
+diff --git a/src/plugins/http/CMakeLists.txt b/src/plugins/http/CMakeLists.txt
+index 39f553ac..9a11bf37 100644
+--- a/src/plugins/http/CMakeLists.txt
++++ b/src/plugins/http/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ 
+ if (PLUGIN_HTTP)
+diff --git a/src/plugins/lfc/CMakeLists.txt b/src/plugins/lfc/CMakeLists.txt
+index 4207f75f..f1912a8c 100644
+--- a/src/plugins/lfc/CMakeLists.txt
++++ b/src/plugins/lfc/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ 
+ if (PLUGIN_LFC)
+diff --git a/src/plugins/mock/CMakeLists.txt b/src/plugins/mock/CMakeLists.txt
+index 545aaf19..224ee9e2 100644
+--- a/src/plugins/mock/CMakeLists.txt
++++ b/src/plugins/mock/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ 
+ if (PLUGIN_MOCK)
+diff --git a/src/plugins/rfio/CMakeLists.txt b/src/plugins/rfio/CMakeLists.txt
+index 6714eda0..70313fd6 100644
+--- a/src/plugins/rfio/CMakeLists.txt
++++ b/src/plugins/rfio/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ 
+ if (PLUGIN_RFIO)
+diff --git a/src/plugins/sftp/CMakeLists.txt b/src/plugins/sftp/CMakeLists.txt
+index 63aa3b6a..93f9f2f9 100644
+--- a/src/plugins/sftp/CMakeLists.txt
++++ b/src/plugins/sftp/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ if (PLUGIN_SFTP)
+     find_package (LIBSSH2 REQUIRED)
+diff --git a/src/plugins/srm/CMakeLists.txt b/src/plugins/srm/CMakeLists.txt
+index 00f389d5..0ef386ca 100644
+--- a/src/plugins/srm/CMakeLists.txt
++++ b/src/plugins/srm/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ 
+ if (PLUGIN_SRM)
+diff --git a/src/plugins/xrootd/CMakeLists.txt b/src/plugins/xrootd/CMakeLists.txt
+index 352955d7..5c6eb350 100644
+--- a/src/plugins/xrootd/CMakeLists.txt
++++ b/src/plugins/xrootd/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ if (PLUGIN_XROOTD)
+ 
+diff --git a/src/utils/CMakeLists.txt b/src/utils/CMakeLists.txt
+index 419df42b..bf8b4198 100644
+--- a/src/utils/CMakeLists.txt
++++ b/src/utils/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ # Dependencies
+ if (IS_IFCE)
+diff --git a/src/version/CMakeLists.txt b/src/version/CMakeLists.txt
+index 9ffa4112..b7564bcf 100644
+--- a/src/version/CMakeLists.txt
++++ b/src/version/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.5)
+ 
+ add_executable (gfal2_version gfal_version)
+ target_link_libraries (gfal2_version "gfal2")
+-- 
+2.48.1
+
