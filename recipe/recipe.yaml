@@ -17,6 +17,7 @@ source:
   sha256: dd477d45dafeb9f8d867cd67be8d41aa4b5e2d325786be0df11d8b2cd2960756
   patches:
     - 0001-Drop-CMakeCXX11Support.patch
+    - 0002-fix-cmake-minimum-version.patch
     - 003-cryptopp.patch
 
 build:
