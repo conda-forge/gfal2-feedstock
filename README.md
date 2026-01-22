@@ -20,7 +20,6 @@ The complexity of the grid is hidden from the client side behind a simple
 common POSIX API. GFAL2 is able to manage all the common used file access
 protocols in a grid & cloud environment.
 
-
 Current build status
 ====================
 
