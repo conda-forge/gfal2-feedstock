@@ -21,7 +21,7 @@ source:
     - 003-cryptopp.patch
 
 build:
-  number: 0
+  number: 1
   skip: win
 
 requirements:
@@ -40,7 +40,7 @@ requirements:
     - libssh2
     - libuuid
     - openldap
-    - xrootd
+    - libxrootd-devel
     - zlib
     - cryptopp
     - json-c

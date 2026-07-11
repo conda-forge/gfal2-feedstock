@@ -36,8 +36,6 @@ srm_ifce:
 - 1.24.6
 target_platform:
 - linux-ppc64le
-xrootd:
-- '5'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
