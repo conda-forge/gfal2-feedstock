@@ -1,11 +1,9 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '11.0'
 MACOSX_SDK_VERSION:
 - '11.0'
 c_compiler:
 - clang
 c_compiler_version:
-- '19'
+- '21'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -17,7 +15,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '19'
+- '21'
 davix:
 - '0.8'
 dcap:
@@ -27,11 +25,13 @@ gct:
 glib:
 - '2'
 json_c:
-- '0.18'
+- '0.19'
 libssh2:
 - '1'
 libuuid:
 - '2'
+libxrootd_devel:
+- '6'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pugixml:
